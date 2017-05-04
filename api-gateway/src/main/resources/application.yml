@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+zuul:
+  routes:
+    fortune:
+      url: http://localhost:8090
+    horoscope:
+      serviceId: horoscope # this publishes a /horoscope endpoint
+
