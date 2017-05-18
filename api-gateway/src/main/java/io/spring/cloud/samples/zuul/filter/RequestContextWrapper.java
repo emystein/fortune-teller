@@ -1,5 +1,6 @@
 package io.spring.cloud.samples.zuul.filter;
 
+import com.google.common.base.Optional;
 import com.netflix.zuul.context.RequestContext;
 
 public class RequestContextWrapper {
@@ -21,8 +22,8 @@ public class RequestContextWrapper {
 		requestContext.set(SERVICE_ID, serviceId);
 	}
 	
-	public String getApiVersion() {
-		return requestContext.getRequest().getHeader(API_VERSION_HEADER);
+	public Optional<String> getApiVersion() {
+		return Optional.fromNullable(requestContext.getRequest().getHeader(API_VERSION_HEADER));
 	}
 
 }

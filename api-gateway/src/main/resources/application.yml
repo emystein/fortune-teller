@@ -5,6 +5,9 @@ zuul:
   routes:
     fortune:
       url: http://localhost:8090
+    horoscope-1:
+      url: http://localhost:8091
+    horoscope-2:
+      url: http://localhost:8092
     horoscope:
       serviceId: horoscope # this publishes a /horoscope endpoint
-
